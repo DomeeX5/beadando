@@ -26,7 +26,7 @@ function Items(props: ItemInterface) {
                 {onToggle ?
                     <button className="confirmation" onClick={() => setOnToggle(!onToggle)}>🗑️</button> :
                     <div className="confirmation">
-                        <button onClick={props.onRemove}>✔️</button>
+                        <button onClick={() => { cancelRemove(); props.onRemove() }}>✔️</button>
                         <button onClick={cancelRemove}>❌</button>
                     </div>
                 }
